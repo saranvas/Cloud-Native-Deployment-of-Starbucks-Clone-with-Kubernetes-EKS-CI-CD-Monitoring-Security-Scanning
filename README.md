@@ -26,6 +26,6 @@ This setup reflects a real-world DevOps pipeline, ensuring:
 - Scalable infrastructure.
 - Actionable monitoring insights.
 
-<img width="1333" height="878" alt="image" src="https://github.com/user-attachments/assets/df226b27-5efb-4501-ba48-e8ae441f23f6" />
+<img width="1639" height="1080" alt="image" src="https://github.com/user-attachments/assets/1797a38d-e144-4c23-a7e1-2ae59ecad439" />
 
 
