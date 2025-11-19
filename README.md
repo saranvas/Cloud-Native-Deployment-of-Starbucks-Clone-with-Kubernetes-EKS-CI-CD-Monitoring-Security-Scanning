@@ -39,7 +39,7 @@ This setup reflects a real-world DevOps pipeline, ensuring:
 - Setup the endpoint monitoring using **blackbox exportor** in prometheus and displayed it grafana dashboard.
 
 <h1>Project Breakdown</h1>
-**Phase 1 -- CI/CD Pipeline: Build, Scan & Deploy on Jenkins Server**
+**Phase 1 - CI/CD Pipeline: Build, Scan & Deploy on Jenkins Server**
 <img width="963" height="457" alt="Screenshot 2025-11-17 170031" src="https://github.com/user-attachments/assets/37f1b99c-8ece-4e1a-9625-ef2ea217e2b5" />
 
 - Pulls the latest code from GitHub
@@ -50,5 +50,17 @@ This setup reflects a real-world DevOps pipeline, ensuring:
 - Pushes the scanned image to DockerHub
 - Runs a local Docker container on the Jenkins server (app runs on port 3003)
 - Sends build + scan alerts via Gmail
+- *End of Phase 1 result:*
+A fully tested, scanned, secure Docker image is created and pushed to DockerHub AND the application is deployed and running on the Jenkins server using Dock
 
+<img width="1365" height="676" alt="image" src="https://github.com/user-attachments/assets/bb553475-7914-4f13-8d0f-f35de5077af3" />
+**Phase 2 — Deployment to Amazon EKS**
+- Jenkins pulls the DockerHub image.
+- Applies Kubernetes YAML manifests
+- Deploys the Starbucks app onto Amazon EKS
+- Creates a LoadBalancer Service to expose the app
+- Makes the application publicly accessible to users
+- *End of Phase 2 result:*
+The Starbucks application runs on Amazon EKS with high availability via a LoadBalancer endpoint.
+<img width="1350" height="675" alt="image" src="https://github.com/user-attachments/assets/81f435ed-f5f3-4b80-9c72-36943c1983bf" />
 
