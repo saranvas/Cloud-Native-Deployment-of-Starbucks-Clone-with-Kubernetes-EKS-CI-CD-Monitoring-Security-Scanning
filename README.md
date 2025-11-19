@@ -7,7 +7,7 @@
 
 
 
-This project delivers a cloud-native deployment pipeline for a Starbucks-Clone web application using modern DevOps tooling, security scanning, and observability. The system automates the entire lifecycle — from code commit to containerization, security checks, deployment on Kubernetes (EKS), and real-time monitoring.
+This project delivers a cloud-native deployment pipeline for a Monolithic Starbucks-Clone web application using modern DevOps tooling, security scanning, and observability. The system automates the entire lifecycle — from code commit to containerization, security checks, deployment on Kubernetes (EKS), and real-time monitoring.
 
 - **CI/CD** (Jenkins) for automated build, test, security scan, and deployment.
 -  **Docker & Dockerhub** for containerization and registry management.                               
@@ -29,14 +29,14 @@ This setup reflects a real-world DevOps pipeline, ensuring:
 <h1>Architecture Diagram</h1>
 <img width="1639" height="1080" alt="image" src="https://github.com/user-attachments/assets/1797a38d-e144-4c23-a7e1-2ae59ecad439" />
 
-- Launched three EC2 instance for the jenkins server, sonarQube server and Monitoring server;
+- Launched three EC2 instances for the jenkins server, sonarQube server and Monitoring server;
 - Used T2.Large instance for the jenkins server and T2.medium for other two.
 - after Launching T2.large ubuntu instance installed jenkins, awscli, trivy, docker, terraform, kubectl.
 - in sonarqube server installed docker and pulled the sonarqube image to run the sonarqube
 - integrated **sonarqube** for code quality check.
 - configure **trivy** for container vulnerability scanning.
 - The Starbucks application is deployed on **Amazon EKS** using a **LoadBalancer service**, enabling external access for end-users. Jenkins automates the deployment by pushing the Docker image to DockerHub and applying Kubernetes manifests that manage pods, services, and rollout updates.
-- Setup the endpoint monitoring using **blackbox exportor** in prometheus and displayed it grafana dashboard.
+- Setup the endpoint monitoring using **blackbox exporter** in prometheus and displayed it grafana dashboard.
 
 <h1>Project Breakdown</h1>
 **Phase 1 - CI/CD Pipeline: Build, Scan & Deploy on Jenkins Server**
@@ -51,7 +51,7 @@ This setup reflects a real-world DevOps pipeline, ensuring:
 - Runs a local Docker container on the Jenkins server (app runs on port 3003)
 - Sends build + scan alerts via Gmail
 - *End of Phase 1 result:*
-A fully tested, scanned, secure Docker image is created and pushed to DockerHub AND the application is deployed and running on the Jenkins server using Dock
+A fully tested, scanned, secure Docker image is created and pushed to DockerHub AND the application is deployed and running on the Jenkins server using Docker container.
 
 <img width="1365" height="676" alt="image" src="https://github.com/user-attachments/assets/bb553475-7914-4f13-8d0f-f35de5077af3" />
 **Phase 2 — Deployment to Amazon EKS**
