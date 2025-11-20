@@ -76,6 +76,9 @@ The Starbucks application runs on Amazon EKS with high availability via a LoadBa
 - *End of Phase 3 result:*
 A fully automated monitoring stack is online, tracking the health and performance of the Starbucks application deployed on Amazon EKS.
 
+<img width="1337" height="683" alt="Screenshot 2025-11-17 214842" src="https://github.com/user-attachments/assets/68a53ffe-d87a-492a-b436-56e47c71b611" />
+
+
 <img width="1010" height="670" alt="Screenshot 2025-11-17 214804" src="https://github.com/user-attachments/assets/ec913723-693f-44bb-9812-b8d1294b88cc" />
 
 <img width="1344" height="594" alt="Screenshot 2025-11-17 214738" src="https://github.com/user-attachments/assets/75d99ffb-8282-458c-8f0b-033a507cc5b1" />
