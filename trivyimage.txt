@@ -1,0 +1,13 @@
+
+Report Summary
+
+┌────────────────────────────────────────────┬────────┬─────────────────┬─────────┐
+│                   Target                   │  Type  │ Vulnerabilities │ Secrets │
+├────────────────────────────────────────────┼────────┼─────────────────┼─────────┤
+│ saranvas/starbucks5:latest (alpine 3.22.2) │ alpine │        0        │    -    │
+└────────────────────────────────────────────┴────────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+ubuntu@ip-172-31-128-126:/var/lib/jenkins/workspace/starbucks$
